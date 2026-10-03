@@ -1,106 +1,485 @@
-# Thandavapura Transit Tracker
+🚌 Thandavapura Transit Tracker
 
-Agent
+Smart • Secure • Real-Time College Bus Tracking Platform
 
+Thandavapura Transit Tracker is a secure web-based college transportation platform designed for MIT Thandavapura. It connects students, teachers, drivers, and authorized college administrators through a centralized system for real-time bus tracking, college information, academic schedules, and issue reporting.
 
+«🚀 Built with Lovable • Designed for real-world campus transportation»
 
+---
 
+🌐 Project Overview
 
+Thandavapura Transit Tracker provides a unified digital platform for managing and tracking college transportation.
 
+Students can securely access their account, search for their assigned bus or route, view its live location, calculate the remaining distance and ETA, receive stop-near notifications, and contact the driver.
 
+Administrators can manage academic and college information, while teachers have a dedicated secure access system.
 
+🎯 Core Goals
 
+- 📍 Real-time college bus tracking
+- 🔐 Secure authenticated access
+- 🚌 Bus and route management
+- ⏱️ Dynamic ETA calculation
+- 🔔 Stop-near notifications
+- 📢 College announcements and updates
+- 📅 Academic calendars
+- 🕐 Class timetables
+- 📝 Exam timetables
+- 🚨 Student issue reporting
+- 👨‍🏫 Dedicated teacher access
+- 👨‍💼 Secure administration controls
 
+---
 
-"Develope a college bus tracking application. The app opens with an animated logo of 'MIT Thandavapura' in orange against a black background, with 'Thandavapura' displayed in white underneath.
+✨ Key Features
 
+🔐 Secure Authentication
 
+The application uses authenticated access to protect private transportation and college information.
 
+Student Login
 
+Students authenticate using:
 
+- Unique USN
+- USN validation beginning with "4MN"
+- One-Time Password (OTP)
+- Linked phone/email verification
+- Optional Google authentication
 
+Only authenticated users can access their private dashboard.
 
-Access is for authorized college personnel only. Standard users login using their unique USN, starting specifically with '4MN', and must enter a matching 4-digit OTP via the linked phone number for secure access. Initial login can be done via Google.
+---
 
+🚌 Real-Time Bus Tracking
 
+The Travel section provides live transportation information.
 
+Features
 
+- 🔎 Search by bus number
+- 🔎 Search by route number
+- 📍 Real-time bus location
+- 🗺️ Interactive map
+- 📏 Remaining distance
+- ⏱️ Estimated arrival time
+- 📌 Current user location
+- 🔄 Automatic position updates
+- 📞 Direct driver call
+- 🎙️ Driver voice messaging
+- 🔌 Connect/disconnect bus tracking
 
+Bus locations can be updated using polling or WebSocket communication, allowing the marker to move continuously while the ETA is recalculated automatically.
 
+---
 
-The app must include separate tabs for 'Travel', 'College Updates', 'Calendars', 'Time Table', 'Issues', and 'Exam Time Table'. Clicking each tab should reveal only relevant details.
+🔔 Stop-Near Notification
 
+Students can configure a preferred distance from their stop.
 
+For example:
 
+«Your bus is 500 meters away from your stop.»
 
+The system monitors the live bus position and triggers a notification when the bus enters the configured distance range.
 
+---
 
+📚 College Information
 
-The 'Travel' tab features a search bar for bus or route number. After searching, it displays real-time tracking on a map, distance left, ETA compared to the user's current location, voice messaging and direct driver call to the driver.
+The dashboard contains separate sections so users can access only the information relevant to that section.
 
+📢 College Updates
 
+Administrators can publish:
 
+- Announcements
+- Notices
+- Important information
+- Photos
+- PDFs
+- Documents
 
+Content can be organized according to:
 
+Year → Branch → Information
 
+---
 
-Administration has exclusive access to upload and update content for 'College Updates', 'Calendars', 'Time Table', and 'Exam Time Table'. These sections must be structured by year and branch. Admins will have a '+' icon to upload photos, PDFs, or other documents. Students are restricted from uploading here.
+📅 Calendars
 
+Academic calendars can be organized by:
 
+- Academic year
+- Branch
+- Semester
 
+---
 
+🕐 Time Table
 
+Students can access their class timetable according to:
 
+Year → Branch → Semester
 
-All users can post problems in an 'Issues' block.
+---
 
+📝 Exam Time Table
 
+Exam schedules can be published and organized by:
 
+- Year
+- Branch
+- Semester
+- Examination type
 
+---
 
+🚨 Issues
 
+All authenticated users can report college or transportation-related problems.
 
-Access to secure GPS settings within the app is secured by biometric authentication, supporting up to five unique biometric IDs, accessible only to you.
+Possible issue categories include:
 
+- 🚌 Bus problems
+- 🛣️ Route problems
+- ⏰ Timing issues
+- 📍 GPS/tracking problems
+- 🏫 College-related issues
+- 🔧 Other issues
 
+Users can submit an issue and administrators can review and manage reported problems.
 
+---
 
+👨‍💼 Administration
 
+Administrators have exclusive permissions for managing official college content.
 
+Admin capabilities
 
-Teachers have separate dedicated login employing biometric and unique IDs; adding new teachers requires specific biometric approval from you.
+- ➕ Upload documents
+- 📷 Upload images
+- 📄 Upload PDFs
+- 📢 Publish college updates
+- 📅 Manage calendars
+- 🕐 Manage timetables
+- 📝 Manage exam timetables
+- 🚌 Manage bus information
+- 👨‍🏫 Manage teacher accounts
+- 🚨 Review reported issues
 
+Students cannot upload or modify official college content.
 
+---
 
+👨‍🏫 Teacher Access
 
+Teachers have a separate authentication system.
 
+Teacher accounts use:
 
+- Unique Teacher ID
+- Biometric authentication
+- Secure authorization
 
-Your prompt should provide clear descriptions of these blocks and their functionalities and adhere to a standard format.
+Adding a new teacher requires authorized biometric approval from the designated system administrator.
 
-Build a web app dashboard with a secure login page. The login should authenticate users using biometrics (fingerprint or Face ID) or a One-Time Password via email. Once logged in, display a private dashboard where the user can enter a unique GPS ID to connect to a specific transit bus tracker. The dashboard should only show the real-time location, distance, and estimated arrival time for that connected bus on a map. Ensure that the user can also disconnect and manage these connected buses, and that no other user can access their dashboard without proper authentication."
+---
 
-Add real-time bus position updates on the map (polling or WebSocket) so bus markers move smoothly and ETA recalculates automatically.
+🛡️ GPS Security
 
-Add a stop-near notification that alerts me when the tracked bus is within a configurable distance of my stop.
+Sensitive GPS and transportation-management functionality is protected using biometric authentication.
 
-This project was built with [Lovable](https://lovable.dev).
+The system is designed to support up to five authorized biometric identities for protected GPS administration.
 
-## Build with Lovable
+«⚠️ Biometric verification should be implemented through the device's secure authentication APIs. The application should never store raw fingerprint or Face ID data.»
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/80caf721-f5b4-4415-b1b5-ab75f7d0db67).
+---
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+🗺️ Private Bus Dashboard
 
-## Development
+After successful authentication, users receive a private transportation dashboard.
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Users can:
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+1. Enter a unique GPS/Bus ID
+2. Connect to a specific bus
+3. View the bus on the map
+4. Monitor distance
+5. Monitor ETA
+6. Receive stop-near notifications
+7. Disconnect the bus
+8. Manage connected buses
+
+Each dashboard is protected by authentication so unauthorized users cannot access another user's transportation information.
+
+---
+
+🔄 Real-Time Tracking Architecture
+
+The application supports continuous bus position updates.
+
+GPS Device
+    │
+    ▼
+Bus Location Service
+    │
+    ├── Polling
+    │
+    └── WebSocket
+          │
+          ▼
+     Backend Server
+          │
+          ▼
+   Real-Time Dashboard
+          │
+          ▼
+     Interactive Map
+          │
+          ├── Bus Position
+          ├── Distance
+          └── ETA
+
+When a new GPS position is received:
+
+New GPS Position
+       ↓
+Update Bus Marker
+       ↓
+Calculate Remaining Distance
+       ↓
+Recalculate ETA
+       ↓
+Check Stop Distance
+       ↓
+Trigger Notification
+
+---
+
+🏗️ Application Structure
+
+Thandavapura Transit Tracker
+│
+├── 🔐 Authentication
+│   ├── Student Login
+│   ├── Teacher Login
+│   ├── Admin Login
+│   ├── OTP Authentication
+│   └── Biometric Authentication
+│
+├── 🚌 Travel
+│   ├── Bus Search
+│   ├── Route Search
+│   ├── Live Map
+│   ├── Distance
+│   ├── ETA
+│   ├── Driver Call
+│   └── Stop Notification
+│
+├── 📢 College Updates
+│
+├── 📅 Calendars
+│
+├── 🕐 Time Table
+│
+├── 🚨 Issues
+│
+├── 📝 Exam Time Table
+│
+└── ⚙️ Administration
+    ├── Content Management
+    ├── Bus Management
+    ├── Teacher Management
+    └── Issue Management
+
+---
+
+🔐 Role-Based Access
+
+Role| Travel| Updates| Calendar| Timetable| Issues| Admin
+Student| ✅| 👁️| 👁️| 👁️| ✅| ❌
+Teacher| ✅| 👁️| 👁️| 👁️| ✅| ❌
+Admin| ✅| ✏️| ✏️| ✏️| ✅| ✅
+
+👁️ View
+✏️ Manage
+❌ Restricted
+
+---
+
+💻 Technology
+
+The project is developed as a modern web application.
+
+Frontend
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Responsive UI
+
+Backend / Services
+
+- Authentication
+- Database
+- Real-time communication
+- GPS tracking
+- File/document management
+
+Maps & Location
+
+- Interactive map
+- GPS coordinates
+- Distance calculation
+- ETA calculation
+- Real-time marker updates
+
+Development
+
+- Git
+- GitHub
+- Lovable
+- npm
+- Node.js
+
+---
+
+🎨 UI Design
+
+The application opens with an animated MIT Thandavapura identity screen.
+
+┌──────────────────────────────┐
+│                              │
+│            MIT               │
+│        Thandavapura          │
+│                              │
+│      Secure • Connected      │
+│                              │
+└──────────────────────────────┘
+
+Design Direction
+
+- 🖤 Black background
+- 🟠 Orange MIT branding
+- ⚪ White typography
+- ✨ Smooth animations
+- 📱 Mobile-friendly interface
+- 💻 Responsive desktop dashboard
+
+---
+
+📸 Screenshots
+
+«Add your actual application screenshots here.»
+
+🔐 Login
+
+/screenshots/login.png
+
+🏠 Dashboard
+
+/screenshots/dashboard.png
+
+🚌 Live Bus Tracking
+
+/screenshots/live-tracking.png
+
+📢 College Updates
+
+/screenshots/college-updates.png
+
+📅 Calendar
+
+/screenshots/calendar.png
+
+🕐 Timetable
+
+/screenshots/timetable.png
+
+🚨 Issues
+
+/screenshots/issues.png
+
+---
+
+🚀 Getting Started
+
+Prerequisites
+
+Make sure you have installed:
+
+- Node.js
+- npm
+- Git
+
+---
+
+Clone the Repository
+
+git clone <your-repository-url>
+cd thandavapura-transit-tracker
+
+Install Dependencies
+
+npm install
+
+Start Development Server
+
 npm run dev
-```
+
+The application will be available through the local development URL shown by Vite.
+
+---
+
+🌐 Live Demo
+
+🚀 Live Demo: Coming Soon
+
+📦 GitHub Repository: This repository
+
+---
+
+🔮 Future Improvements
+
+Planned improvements include:
+
+- 📱 Android application
+- 🍎 iOS application
+- 📡 Dedicated GPS hardware integration
+- 🚌 Driver mobile application
+- 🔔 Push notifications
+- 🗺️ Advanced route visualization
+- 📊 Admin analytics dashboard
+- 🚌 Multiple bus tracking
+- 📈 Transportation statistics
+- ☁️ Cloud deployment
+- 🔒 Advanced security monitoring
+
+---
+
+👨‍💻 Project
+
+Thandavapura Transit Tracker
+
+A college transportation and information management platform designed for MIT Thandavapura.
+
+Built with ❤️ for smarter campus transportation.
+
+---
+
+📜 License
+
+This project is intended for educational and institutional use.
+
+---
+
+⭐ Support
+
+If you find this project interesting, consider giving the repository a ⭐ on GitHub.
+
+MIT Thandavapura — Connected Campus. Smarter Travel.
