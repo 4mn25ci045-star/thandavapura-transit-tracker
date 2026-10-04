@@ -482,4 +482,5 @@ This project is intended for educational and institutional use.
 
 If you find this project interesting, consider giving the repository a ⭐ on GitHub.
 
-MIT Thandavapura — Connected Campus. Smarter Travel.
+MIT Thandavapura — Connected Campus. Smarter Trave<img width="1254" height="1254" alt="1000098394" src="https://github.com/user-attachments/assets/64792014-2c0f-44f7-b594-4573b177b5ca" />
+l.
